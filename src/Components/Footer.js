@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footerText">Sam Abdul</div>
       <div className="footerIcon">
 
-      <Link href="https://samabdul.com"
+      <Link href="https://www.samspace.dev/"
       onClick={() => {
         alert("Redirecting to Sam Abdul Portfolio");
       }}>
