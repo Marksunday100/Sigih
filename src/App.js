@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import InputShortener from "./Components/InputShortener";
+import LinkResult from "./Components/LinkResult";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 
+// Theme color #13B46E
 function App() {
+  const [inputValue, setInputValue] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      <div className="container">
+        <InputShortener setInputValue={setInputValue} />
+
+        <LinkResult inputValue={inputValue} />
+      </div>
+      <About />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
